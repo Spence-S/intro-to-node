@@ -10,12 +10,23 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// template engine
+app.set('view engine', 'pug');
+
 // static files
 app.use('/html', express.static(path.join(__dirname, 'public')));
 
 // routes
 app.get('/', (req, res, next) => {
   res.send('Hello FCC!');
+});
+
+app.get('/pug', (req, res, next) => {
+  res.render('home', { title: 'title is a local!' });
+});
+
+app.post('/', (req, res, next) => {
+  res.send(req.body);
 });
 
 // catch 404 errors
