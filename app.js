@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const fs = require('fs');
 
 const app = express();
 
@@ -26,6 +27,9 @@ app.get('/pug', (req, res, next) => {
 });
 
 app.post('/', (req, res, next) => {
+  fs.appendFile('names.txt', req.body.name, err => {
+    if (err) throw err;
+  });
   res.send(req.body);
 });
 
