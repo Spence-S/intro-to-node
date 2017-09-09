@@ -1,0 +1,25 @@
+{
+  "name": "intro-to-node",
+  "version": "1.0.0",
+  "description": "Code for the intro to node class!",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spence-S/intro-to-node.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "api",
+    "static"
+  ],
+  "author": "Spencer Snyder <sasnyde2@gmail.com> (https://spence-s.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Spence-S/intro-to-node/issues"
+  },
+  "homepage": "https://github.com/Spence-S/intro-to-node#readme"
+}
