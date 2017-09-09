@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/html', express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res, next) => {
   res.send('Hello FCC!');
